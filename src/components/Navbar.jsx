@@ -38,6 +38,14 @@ const Navbar = () => {
               All Animals
             </Link>
           </li>
+          <li>
+            <Link
+              href="/my-profile"
+              className="text-white hover:text-yellow-400"
+            >
+              My-Profile
+            </Link>
+          </li>
         </ul>
 
         <div className="flex gap-3 items-center">
