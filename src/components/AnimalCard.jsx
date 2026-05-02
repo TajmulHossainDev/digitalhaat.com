@@ -4,7 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const AnimalCard = ({ animal }) => {
   return (
-    <div className="border rounded-lg p-3 shadow-sm hover:shadow-lg transition duration-300">
+    <div className="border border-gray-200 rounded-lg p-3 shadow-sm hover:shadow-lg transition duration-300">
       <div className="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden rounded-lg">
         <Image
           src={animal.image}
