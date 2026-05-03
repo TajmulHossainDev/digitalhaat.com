@@ -24,7 +24,7 @@ const AnimalCard = ({ animal }) => {
           <FaLocationDot /> {animal.location}{" "}
         </p>
       </div>
-      <Link href={`/animal/${animal.id}`}>
+      <Link href={`/animals/${animal.id}`}>
         <button className="w-full border border-green-700 text-green-700 py-1.5 rounded mt-2 hover:bg-green-500 hover:text-white text-sm font-bold transition duration-300">
           See Details
         </button>
