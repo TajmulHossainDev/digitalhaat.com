@@ -68,8 +68,15 @@ const Login = () => {
             </Button>
           </div>
         </Form>
-        <p className="text-center my-4 text-sm text-gray-500"> Or </p>
-        <button className="w-full flex items-center justify-center gap-2 border py-2 rounded-full text-sm bg-emerald-900 text-white hover:bg-emerald-800">
+        <div className="flex items-center gap-2 my-4">
+          <div className="flex-1 h-px bg-gray-300"></div>
+          <span className="text-sm text-gray-500">OR</span>
+          <div className="flex-1 h-px bg-gray-300"></div>
+        </div>
+        <button
+          type="submit"
+          className="w-full flex items-center justify-center gap-2 border py-2 rounded-full text-sm bg-emerald-900 text-white hover:bg-emerald-800"
+        >
           <FaGoogle /> Sign In With Google
         </button>
         <p className="text-center text-sm mt-4">
