@@ -55,8 +55,6 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-         
-
 
         <div className="flex gap-3 items-center">
           {!user && (
@@ -75,31 +73,65 @@ const Navbar = () => {
               </Link>
             </>
           )}
-          {user &&(
+          {user && (
             <div className="flex gap-3 items-center">
-              <Image src={user?.image} alt={user?.name} referrerPolicy="no-referrer" className="w-8 h-8 rounded-full object-cover"> 
-              </Image>
-              <button onClick={handleSignOut} className="flex justify-center  text-sm bg-red-500 text-white px-3 py-1.5 rounded-full hover:bg-red-600 ">logout</button>
+              <Image
+                src={user?.image}
+                alt={user?.name}
+                width={50}
+                height={50}
+                referrerPolicy="no-referrer"
+                className="w-8 h-8 rounded-full object-cover"
+              ></Image>
+              <button
+                onClick={handleSignOut}
+                className="flex justify-center  text-sm bg-red-500 text-white px-3 py-1.5 rounded-full hover:bg-red-600 "
+              >
+                logout
+              </button>
             </div>
           )}
           <button
-  onClick={() => setMenuOpen(!menuOpen)}
-  className="md:hidden ml-auto flex flex-col justify-center items-center gap-1.5 w-8 h-8"
->
-  <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-  <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-  <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-</button>
-
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden ml-auto flex flex-col justify-center items-center gap-1.5 w-8 h-8"
+          >
+            <span
+              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
+          </button>
         </div>
       </nav>
       {menuOpen && (
-  <div className="md:hidden bg-emerald-800 px-4 pb-4 flex flex-col gap-3">
-    <Link href="/" onClick={() => setMenuOpen(false)} className="text-white text-sm py-2 border-b border-emerald-700 hover:text-yellow-400">Home</Link>
-    <Link href="/animals" onClick={() => setMenuOpen(false)} className="text-white text-sm py-2 border-b border-emerald-700 hover:text-yellow-400">All Animals</Link>
-    <Link href="/my-profile" onClick={() => setMenuOpen(false)} className="text-white text-sm py-2 border-b border-emerald-700 hover:text-yellow-400">My-Profile</Link>
-  </div>
-)}
+        <div className="md:hidden bg-emerald-800 px-4 pb-4 flex flex-col gap-3">
+          <Link
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            className="text-white text-sm py-2 border-b border-emerald-700 hover:text-yellow-400"
+          >
+            Home
+          </Link>
+          <Link
+            href="/animals"
+            onClick={() => setMenuOpen(false)}
+            className="text-white text-sm py-2 border-b border-emerald-700 hover:text-yellow-400"
+          >
+            All Animals
+          </Link>
+          <Link
+            href="/my-profile"
+            onClick={() => setMenuOpen(false)}
+            className="text-white text-sm py-2 border-b border-emerald-700 hover:text-yellow-400"
+          >
+            My-Profile
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
