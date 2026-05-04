@@ -1,12 +1,21 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const UpdateProfilePage = () => {
-  const onSubmit = (e) => {
+  const router = useRouter();
+
+  const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
-    console.log({ name, image });
-    // TODO: logic part এ authClient.updateUser() দিব
+    await authClient.updateUser({
+      name,
+      image,
+    });
+    toast.success("profile update successfully");
+    router.push("/my-profile");
   };
 
   return (

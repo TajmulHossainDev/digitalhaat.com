@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BookingForm from "@/components/BookingForm";
 
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -30,35 +31,8 @@ const AnimalDetailsPage = async ({ params }) => {
             {" "}
             ${animal.price.toLocaleString()}{" "}
           </p>
-          <h2 className="text-xl font-bold mb-4">Please Book</h2>
-          <form className="space-y-3">
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"
-            ></input>
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"
-            ></input>
-            <input
-              type="tel"
-              placeholder="Enter Your Mobile Number"
-              className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"
-            ></input>
-            <textarea
-              placeholder="Enter Your Address"
-              rows={3}
-              className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-emerald-900 text-white py-2 rounded hover:bg-emerald-700"
-            >
-              Confirm Your Booking
-            </button>
-          </form>
+          <h2 className="text-xl font-bold mb-4 text-center">Please Book</h2>
+          <BookingForm></BookingForm>
         </div>
       </div>
     </div>
