@@ -1,11 +1,12 @@
 import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
+import animalsData from "../../public/animals.json";
+import { notFound } from "next/navigation";
 
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch("https://digitalhaat-com.vercel.app/animals.json");
-  const animals = await res.json();
-  const animal = animals.find((a) => a.id == id);
+  const animal = animalsData.find((a) => a.id == id);
+  if (!animal) return notFound;
   return (
     <div className="max-w-7xl mx-auto px-4 my-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

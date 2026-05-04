@@ -1,6 +1,7 @@
+import animalsData from "../../public/animals.json";
+
 const TopBreeds = async () => {
-  const res = await fetch("http://localhost:3000/animals.json");
-  const animals = await res.json();
+  const animals = animalsData;
   const breedMap = {};
 
   animals.forEach((animal) => {

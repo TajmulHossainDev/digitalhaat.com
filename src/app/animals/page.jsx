@@ -1,10 +1,10 @@
 import AnimalCard from "@/components/AnimalCard";
 import Link from "next/link";
+import animalsData from "../../public/animals.json";
 
 const AllAnimalPage = async ({ searchParams }) => {
   const { sort } = await searchParams;
-  const res = await fetch("https://digitalhaat-com.vercel.app/animals.json");
-  const animals = await res.json();
+  const animals = [...animalsData];
   if (sort === "price-asc") {
     animals.sort((a, b) => a.price - b.price);
   } else if (sort === "price-desc") {

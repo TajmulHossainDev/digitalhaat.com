@@ -1,8 +1,8 @@
 import AnimalCard from "./AnimalCard";
+import animalsData from "../../public/animals.json";
 const FeaturedAnimals = async () => {
-  const res = await fetch("https://digitalhaat-com.vercel.app/animals.json");
-  const animals = await res.json();
-  const featured = animals.slice(0, 4);
+  const animals = animalsData;
+  const featured = animals.filter((a) => a.featured).slice(0, 4);
   return (
     <div className="container mx-auto px-4 my-10">
       <h1 className="text-3xl font-bold mb-6 text-center"> Featured Animal </h1>
