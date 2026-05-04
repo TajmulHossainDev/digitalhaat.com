@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import AnimalCard from "./AnimalCard";
 import animalsData from "../../public/animals.json";
 const FeaturedAnimals = async () => {

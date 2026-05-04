@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import AnimalCard from "@/components/AnimalCard";
 import Link from "next/link";
 import animalsData from "../../public/animals.json";

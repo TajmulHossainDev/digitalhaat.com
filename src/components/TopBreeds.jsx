@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import animalsData from "../../public/animals.json";
 
 const TopBreeds = async () => {

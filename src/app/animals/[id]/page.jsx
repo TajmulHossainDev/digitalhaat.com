@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
 import animalsData from "../../public/animals.json";
