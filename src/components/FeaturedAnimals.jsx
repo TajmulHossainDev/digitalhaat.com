@@ -1,6 +1,6 @@
 import AnimalCard from "./AnimalCard";
 const FeaturedAnimals = async () => {
-  const res = await fetch("http://localhost:3000/animals.json");
+  const res = await fetch("https://digitalhaat-com.vercel.app/animals.json");
   const animals = await res.json();
   const featured = animals.slice(0, 4);
   return (

@@ -48,7 +48,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-sm text-gray-400 uppercase">Quick Links</h3>
+            <h3 className="font-semibold text-sm text-gray-400 uppercase">
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">
@@ -56,7 +58,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/animals" className="hover:text-white transition-colors">
+                <Link
+                  href="/animals"
+                  className="hover:text-white transition-colors"
+                >
                   All Animals
                 </Link>
               </li>
@@ -64,15 +69,23 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-gray-300">Account</h3>
+            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-gray-300">
+              Account
+            </h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/login" className="hover:text-white transition-colors">
+                <Link
+                  href="/login"
+                  className="hover:text-white transition-colors"
+                >
                   Login
                 </Link>
               </li>
               <li>
-                <Link href="/register" className="hover:text-white transition-colors">
+                <Link
+                  href="/register"
+                  className="hover:text-white transition-colors"
+                >
                   Register
                 </Link>
               </li>
@@ -80,17 +93,22 @@ const Footer = () => {
           </div>
 
           <div className="">
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-gray-300">Contact</h3>
+            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-gray-300">
+              Contact
+            </h3>
             <ul className=" space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
-                <FaLocationDot className="mt-0.5 shrink-0" /> <span>Dhaka, Bangladesh</span> 
+                <FaLocationDot className="mt-0.5 shrink-0" />{" "}
+                <span>Dhaka, Bangladesh</span>
               </li>
               <li className="flex items-start gap-2">
-                <FaPhoneAlt className="mt-0.5 shrink-0"  /> <span>+880 1700-000000</span>
+                <FaPhoneAlt className="mt-0.5 shrink-0" />{" "}
+                <span>+880 1700-000000</span>
               </li>
               <li className="flex items-start gap-2">
                 {" "}
-                <MdEmail className="mt-0.5 shrink-0"  /> <span className="break-all">info@digitalqurbanihaat.com</span>
+                <MdEmail className="mt-0.5 shrink-0" />{" "}
+                <span className="break-all">info@digitalqurbanihaat.com</span>
               </li>
             </ul>
           </div>

@@ -3,7 +3,7 @@ import BookingForm from "@/components/BookingForm";
 
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch("http://localhost:3000/animals.json");
+  const res = await fetch("https://digitalhaat-com.vercel.app/animals.json");
   const animals = await res.json();
   const animal = animals.find((a) => a.id == id);
   return (

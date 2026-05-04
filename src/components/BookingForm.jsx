@@ -21,19 +21,19 @@ const BookingForm = () => {
   return (
     <form onSubmit={onSubmit} className="space-y-3">
       <input
-      required
+        required
         type="text"
         placeholder="Enter Your Name"
         className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"
       ></input>
       <input
-      required
+        required
         type="email"
         placeholder="Enter Your Email"
         className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"
       ></input>
       <input
-      required
+        required
         type="tel"
         placeholder="Enter Your Mobile Number"
         className="w-full border rounded px-3 py-2 text-sm outline-none focus:border-green-700"

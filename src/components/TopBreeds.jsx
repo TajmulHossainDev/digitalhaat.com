@@ -11,10 +11,13 @@ const TopBreeds = async () => {
     }
   });
 
-  const topBreeds = Object.entries(breedMap).map(([breed, count]) => ({
-    breed,
-    count,
-  })).sort((a,b) => b.count - a.count).slice(0,5);
+  const topBreeds = Object.entries(breedMap)
+    .map(([breed, count]) => ({
+      breed,
+      count,
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 5);
 
   return (
     <div className="container mx-auto px-4 my-10">
